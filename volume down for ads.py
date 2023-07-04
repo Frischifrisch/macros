@@ -62,7 +62,7 @@ def uppinator():
     if lowered:
         lowered = False
         print("going up")
-        for i in range(times):
+        for _ in range(times):
             press('volumeup')
 
 exit_key = KeyCode(192) # '~' is 192, Esc is 27 or Key.esc
