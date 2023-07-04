@@ -15,7 +15,7 @@ button = Button.right
 start_stop_key = KeyCode(char='n')
 exit_key = KeyCode(char='e')
 
-print("press %s to start/stop and %s to exit" % (start_stop_key, exit_key))
+print(f"press {start_stop_key} to start/stop and {exit_key} to exit")
 
 class ClickMouse(threading.Thread):
     def __init__(self, button):

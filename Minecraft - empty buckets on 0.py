@@ -39,7 +39,7 @@ def on_press(key):
     elif key == start_stop_key:
         print('macro started')
         wait(start_delay)
-        for i in range(repeats):
+        for _ in range(repeats):
             mouse.scroll(0,-2)
             wait()
             clicky()
@@ -67,7 +67,6 @@ try:
     listener.start()
     print("program started")
     while running:
-        if False:
-            print("your computer is broken")
+        pass
 finally:
     print('parent thread ended\n')

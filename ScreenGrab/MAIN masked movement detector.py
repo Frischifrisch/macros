@@ -35,15 +35,12 @@ def roi_priority(img):
     #clear the priority sections from the mask
     for current in priorities:
         cv2.fillPoly(mask, np.array([current]), 0)
-    #combine mask with image
-    masked = cv2.bitwise_or(img, mask)
-    return masked
+    return cv2.bitwise_or(img, mask)
 
 def roi_block(img, vertices):
     mask = np.full_like(img, 255) # blank canvas
     cv2.fillPoly(mask, vertices, 0) # fill the mask with black
-    masked = cv2.bitwise_and(img, mask) # show img except for the mask
-    return masked
+    return cv2.bitwise_and(img, mask)
 
 def process_img(image):
     ## adds ROI mask to avoid reading hotbar bubbles and chat

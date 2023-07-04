@@ -53,19 +53,6 @@ def screen_record():
                 #count how many similar frames in a row to avoid flukes
                 same_count += 1
                 print(same_count,end='')
-                if True:
-                    pass#temporarily stop keys from being pressed
-                elif same_count >= 7:
-                    # if stopped on edge go forward
-                    sendinput(W, delay=.2)
-                    # toggle movement direction
-                    if key==A:
-                        key = D
-                    elif key==D:
-                        key = A
-                        
-                elif same_count >= 3:
-                    sendinput(key) # go left or right when screen doesn't change
             else:
                 same_count = 0 # reset count if change occurs
         except:
